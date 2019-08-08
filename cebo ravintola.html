@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<title>Bistro & Bar Cebo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="cebostyles.css">
+<style>
+    body,
+    html {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+        background-position: center;
+        background-size: cover;
+        background-image: url("kalat.jpg");
+        min-height: 75%;
+        width: 100%
+    }
+
+    .menu {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-black">
+            <div class="w3-col s2">
+                <a href="#" class="w3-button w3-block w3-black">HOME</a>
+            </div>
+            <div class="w3-col s2">
+                <a href="#about" class="w3-button w3-block w3-black">BISTRO</a>
+            </div>
+            <div class="w3-col s2">
+                <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+            </div>
+            <div class="w3-col s2">
+                <a href="#where" class="w3-button w3-block w3-black">KARTTA</a>
+            </div>
+            <div class="w3-col s2">
+                <a href="#varaa" class="w3-button w3-block w3-black">VARAA</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+            <span class="w3-tag">Avoinna MA-LA 18:00-02:00</span>
+        </div>
+        <div class="w3-display-middle w3-center w3-responsive">
+            <span class="w3-text-pink " style="font-size:30vw"><b>Cebo</b></span>
+        </div>
+        <div class="w3-display-bottomright w3-center w3-padding-large">
+            <span class="w3-text-white">Mikonkatu 9, Helsinki</span>
+        </div>
+    </header>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-sand w3-grayscale w3-large">
+
+        <!-- About Container -->
+        <div class="w3-container" id="about">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">BISTRO & BAR</span></h5>
+                <p>Cebossa matkaamme modernin bistroruoan ääreen, keskelle Espanjan, Italian ja Ranskan makumaailmaa.
+                    Keittiömme taidonnäytteet lautasilla, Bar Cebon leikittelevät, käsityönä valmistetut cocktailit
+                    laseissa ja viikonloppuisin levyjä pyörittävät DJ:t tarjoavat elämyksellisiä hetkiä Helsingin
+                    sykkeessä
+                    perheille, kaveriseurueille sekä yritysvieraille.</p>
+
+                <div class="w3-panel w3-leftbar w3-light-grey">
+                    <p><i>"Päätin perustaa ravintolan, jossa haluaisin itsekin käydä. Mutkattoman, laadukkaisiin
+                            raaka-aineisiin ja ystävälliseen palveluun panostavan bistron. Meillä asiakkaita
+                            kohdellaan kuin vieraita kotona.
+                            <br>
+                            Tervetuloa vieraaksemme!"</i></p>
+                    <p>Chef ja omistaja: Mia Jansen</p>
+                </div>
+                <img src="drink.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+                <p><strong>Avoinna:</strong> MA-LA 18:00-02:00</p>
+                <p><strong>Osoite:</strong> Mikonkatu 9, Helsinki</p>
+            </div>
+        </div>
+
+        <!-- Menu Container -->
+        <div class="w3-container" id="menu">
+            <div class="w3-content" style="max-width:700px">
+
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MENU</span></h5>
+
+                <div class="w3-row w3-center w3-card w3-padding">
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Salaatit & Tapakset');" id="myLink">
+                        <div class="w3-col s3 tablink">Salaatit & Tapakset</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Kalat');">
+                        <div class="w3-col s3 tablink">Kalat</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Pihvit');">
+                        <div class="w3-col s3 tablink">Pihvit</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Jälkiruuat');">
+                        <div class="w3-col s3 tablink">Jälkiruuat</div>
+                    </a>
+                </div>
+
+                <div id="Salaatit & Tapakset" class="w3-container menu w3-padding-48 w3-card">
+                    <h5>MARINOITUJA KATKARAPUJA 8,-</h5>
+                    <p class="w3-text-grey"> kurkkua, tomaattia, oliiveja, sinappimajoneesia</p><br>
+
+                    <h5>PESTO-VALKOSIPULIGRATINOIDUT ETANAT 8,-</h5>
+                    <p class="w3-text-grey">Pesto-valkosipulivoilla gratinoituja etanoita</p><br>
+
+                    <h5>KUKONPOJAN SALAATTI 12,-</h5>
+                    <p class="w3-text-grey"> broilerin rintafileetä, hedelmää, punasipulia,
+                        paprikaa, barbeque-kastiketta ja raikasta salaattia</p><br>
+
+                    <h5>KALASTAJAN SALAATTI 12,-</h5>
+                    <p class="w3-text-grey"> pariloitua lohta, punasipulia, parsaa, oliiveja,
+                        minttupestokastiketta ja raikasta salaattia</p><br>
+
+                    <h5>KARITSA-FETAJUUSTOSALAATTI 12,-</h5>
+                    <p class="w3-text-grey"> karitsanpaistia, paprikaa, punasipulia, fetaa, oliiveja,
+                        minttupestokastiketta ja raikasta salaattia</p>
+
+                </div>
+
+                <div id="Kalat" class="w3-container menu w3-padding-48 w3-card">
+                    <h5>RAMON AHVENET 17,-</h5>
+                    <p class="w3-text-grey"> ruiskuorrutettuja ahvenfileitä, parsaa, sauternes-kastiketta ja
+                        yrttiperunaa</p><br>
+
+                    <h5>LAUTTURIN LOHISAALIS 16,-</h5>
+                    <p class="w3-text-grey"> pariloitua lohta, sienikastiketta, parsaa ja uuniperuna</p><br>
+
+                    <h5>MIEKKAKALAA NANTUA 19,-</h5>
+                    <p class="w3-text-grey"> pariloitua miekkakalaa, katkarapu-viinikastiketta, oliiveja ja uuniperuna
+                    </p><br>
+
+                </div>
+
+                <div id="Pihvit" class="w3-container menu w3-padding-48 w3-card">
+                    <h5>VALKOSIPULIHÄRKÄÄ 22,-</h5>
+                    <p class="w3-text-grey"> pariloitu härän ulkofileepihvi, pekoni-sipuli-papua, marinoituja
+                        valkosipulinkynsiä, valkosipulivoita ja perunaa</p><br>
+
+                    <h5>TÄYTETTY LEHTIPIHVI 20,-</h5>
+                    <p class="w3-text-grey"> herkkusieni-sipulitäyte, pippurijuustoa ja tikkuperunaa</p><br>
+
+                    <h5>PIPPURIPIHVI 150g / 24,- ja 200g / 27,-</h5>
+                    <p class="w3-text-grey"> härän sisäfileepihvi, kermaista
+                        pippurikastiketta paistovihanneksia ja uuniperuna</p><br>
+
+                    <h5>LAMMASPAIMENEN PAISTIKKEET 23,-</h5>
+                    <p class="w3-text-grey"> karitsan paistikkeet, minttu-viinikastiketta ja valkosipuliperunaa</p><br>
+
+                </div>
+
+                <div id="Jälkiruuat" class="w3-container menu w3-padding-48 w3-card">
+                    <h5>TALON JÄÄTELÖÄ 6,-</h5>
+                    <p class="w3-text-grey">keittiömme tekemää omaa jäätelöä ja minttukastiketta</p><br>
+
+                    <h5>JUUSTOKAKKU 7,-</h5>
+                    <p class="w3-text-grey"> tuorejuustokakkua ja marjakastiketta</p><br>
+
+                    <h5>SORBETTIA JA HEDELMÄÄ 6,-</h5>
+                    <p class="w3-text-grey"> sorbettia ja sesongin hedelmiä</p><br>
+
+                    <h5>PARFAIT ”KASTANJA” 5,-</h5>
+                    <p class="w3-text-grey"> kausittain vaihtuva jäädyke</p><br>
+
+                </div>
+                <img src="dessert.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+            </div>
+        </div>
+
+        <!-- Contact/Area Container -->
+        <div class="w3-container" id="where" style="padding-bottom:32px;">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">KARTTA</span></h5>
+                <center>
+                    <p>Löydät meidät osoitteesta Mikonkatu 9, Helsinki.</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.651794348394!2d24.94336301560155!3d60.16994315038076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcc2d2d6e33%3A0xd010f934176ca3cd!2sMikonkatu+9%2C+00101+Helsinki!5e0!3m2!1sfi!2sfi!4v1554462427584!5m2!1sfi!2sfi"
+                        width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </center>
+            </div>
+        </div>
+
+        <div class="w3-container" id="varaa" style="padding-bottom:32px;">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">VARAA PÖYTÄ</span></h5>
+                <p><strong>Varaa</strong> pöytä tällä lomakkeella. Voit myös soittaa ravintolaan 044-568 4587.</p>
+                <form action="/action_page.php" target="_blank">
+                    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nimi" required
+                            name="Nimi"></p>
+                    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Puhelinnumero" required
+                            name="Puhelinnumero"></p>
+                    <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Henkilömäärä" required
+                            name="Henkilömäärä"></p>
+                    <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local"
+                            placeholder="Päivämäärä ja aika" required name="date" value="Päivämäärä ja aika"></p>
+                    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Toiveet" name="Toiveet">
+                    </p>
+                    <p><button class="w3-button w3-black" type="submit">TEE VARAUS</button></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-48 w3-medium">
+        <p class="w3-large">Cebo</p>
+        <p>Mikonkatu 9, Helsinki</p>
+        <p>tel. 044-568 4587</p>
+        <p>MA-LA 18:00-02:00</p>
+
+    </footer>
+
+    <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+        }
+        document.getElementById("myLink").click();
+    </script>
+
+</body>
+
+</html>
